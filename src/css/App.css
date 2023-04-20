@@ -1,0 +1,191 @@
+/* Générale */
+.App {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.Home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.title {
+  position: relative;
+  top: 0;
+  font-size: 3rem;
+  animation: fadeIn 2s;
+}
+
+.title.move {
+  top: -35%;
+  transition: 2s;
+}
+
+.excuse {
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.modalBtn.hide {
+  margin-left: 2rem;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modalBtn.show {
+  margin-left: 2rem;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+.bouton.hide {
+  margin-top: 1rem;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.bouton.show {
+  margin-top: 1rem;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Modal */
+.overlay {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+.modalContainer {
+  max-width: 300px;
+  width: 100%;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.75);
+}
+
+.closeBtn {
+  position: fixed;
+  top: 8px;
+  right: 8px;
+}
+
+.content {
+  width: 100%;
+}
+
+.inputLabel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+}
+
+.labelModal {
+  font-weight: bold;
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+}
+
+.btnValidate.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.btnContainer button {
+  width: 100%;
+  margin: 0.5rem;
+  padding: 5px 0;
+  font-weight: bold;
+}
+/* Loader */
+.containerLoader {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  bottom: 2px;
+  padding: 0.5rem 1rem;
+  z-index: -1;
+}
+
+.loader.show {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  opacity: 1;
+}
+
+.loader.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  margin: 8px;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  animation: loader 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: black transparent transparent transparent;
+}
+.loader div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.loader div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.loader div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+/* Animation */
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
